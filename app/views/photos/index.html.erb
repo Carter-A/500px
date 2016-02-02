@@ -1,4 +1,6 @@
-HELLO WORLD
+
 <% @photos_url.each do |photo_url| %>
-  <%= image_tag photo_url %>
+  <div class="col-sm-4 img-container">
+    <%= image_tag photo_url %>
+  </div>
 <% end %>
