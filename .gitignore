@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore configatron files
+/config/configatron/defaults.rb
