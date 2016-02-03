@@ -17,18 +17,19 @@
 @import "bootstrap";
 @import "photos";
 
-$border-color: #222;
+$nav-color: #222;
 $content-color: #f7f8fa;
 
 .content-container{
   background-color: $content-color;
 }
 
+
 .navbar {
   height: 50px;
   border-radius: 0;
-  background-color: $border-color;
-  border-color: $border-color;
+  background-color: $nav-color;
+  border-color: $nav-color;
   margin: 0;
 }
 
@@ -52,4 +53,12 @@ $content-color: #f7f8fa;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80px 80px;
+}
+
+@media(max-width: 767px){
+  .navbar-collapse{
+    background-color: $nav-color;
+    position: relative;
+    z-index: 1;
+  }
 }
