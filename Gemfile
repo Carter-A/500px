@@ -35,6 +35,9 @@ gem 'configatron'
 #Multi Json to parse json api response
 gem 'multi_json'
 
+#Oauth login
+gem 'omniauth'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
