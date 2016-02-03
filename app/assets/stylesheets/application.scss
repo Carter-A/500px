@@ -16,3 +16,40 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "photos";
+
+$border-color: #222;
+$content-color: #f7f8fa;
+
+.content-container{
+  background-color: $content-color;
+}
+
+.navbar {
+  height: 50px;
+  border-radius: 0;
+  background-color: $border-color;
+  border-color: $border-color;
+  margin: 0;
+}
+
+.navbar-brand{
+  padding: 0 10px;
+}
+
+.logo {
+  background: url(https://assetcdn2.500px.org/assets/brand/wordmark@2x-9f4fb43826e29db609c3a70dc7030988.png) center center no-repeat;
+  background-size: 80px 20px;
+  float: left;
+  width: 80px;
+  height: 50px;
+}
+
+.numbers {
+  background-image: url(/images/menu-sprite.png);
+  width: 50px;
+  height: 50px;
+  float: right;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+}

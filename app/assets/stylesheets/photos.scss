@@ -2,10 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.photo-grid{
+  margin-top: 20px;
+}
 img {
   width: 100%;
+  overflow: hidden;
 }
 
 .img-container {
   padding: 2.5px;
+  max-height: 210px;
+  overflow: hidden;
+  display: -webkit-flex; /* Safari */
+  -webkit-align-items: flex-end; /* Safari 7.0+ */
+  display: flex;
+  align-items: flex-end;;
+  margin-top: 5px;
+}
+
+.px-container{
+  padding: 0;
+}
+.px-tab {
+  height: 50px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.px-tab > ul > li {
+  list-style: none;
+  font-size: 14;
+  line-height: 50px;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #71767a;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#popular-li {
+  color: #0099e5;
+  border-bottom: 2px solid #0099e5;
+}
+
+@media (max-width: 768px){
+  .img-container {
+    max-height: 356px;  
+  }
 }
