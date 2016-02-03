@@ -29,10 +29,22 @@
           <li><a href="#">Home</a></li>
           <li><a href="#">Discover</a></li>
           <li><a href="#">Groups</a></li>
+          <% if current_user %>
+            <li><%= link_to 'Logout', '/logout' %></li>
+          <% else %>
+            <li><%= link_to 'Login', '/auth/500px' %></li>
+          <% end %>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
+
+<% if flash[:succes] %>
+  <div class="success">
+    <%= flash[:success] %>
+  </div>
+<% end %>
+
 <div class="content-container">
   <%= yield %>
 </div>

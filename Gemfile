@@ -36,7 +36,7 @@ gem 'configatron'
 gem 'multi_json'
 
 #Oauth login
-gem 'omniauth'
+gem 'omniauth-500px'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

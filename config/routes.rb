@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root "photos#index"
   resources :photos
+  delete '/logout', to: 'sessions#destroy'
+  get '/auth/500px/callback', to: 'sessions#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
