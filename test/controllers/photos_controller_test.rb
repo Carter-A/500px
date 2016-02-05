@@ -19,4 +19,10 @@ class PhotosControllerTest < ActionController::TestCase
     get :index
     assert_select 'a.like-overlay', 100
   end
+
+  test "should get show" do
+    get(:show, {'id' => "139029315"}, {'user_id' => 1})
+    assert_select 'img', 1
+  end
+
 end

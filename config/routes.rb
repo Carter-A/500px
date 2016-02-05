@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root "photos#index"
   resources :photos
   post '/logout', to: 'sessions#destroy'
+  get 'photos/:id', to: 'photos#show'
   get '/auth/500px/callback', to: 'sessions#create'
   post '/like/:id', to: 'photos#like'
   # The priority is based upon order of creation: first created -> highest priority.
