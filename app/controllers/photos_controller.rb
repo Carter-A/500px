@@ -20,6 +20,7 @@ class PhotosController < ApplicationController
     body["photos"].each do |photo|
       @photos << [photo["image_url"]]
       @photos.last << photo["id"]
+      @photos.last << photo["liked"]
     end
   end
 

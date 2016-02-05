@@ -1,16 +1,29 @@
 <div class="container photo-grid">
   <div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
+    <div class="col-xs-6 col-xs-offset-1">
       <%= image_tag @photo["image_url"] %>
     </div>
 
-    <div class="col-xs-3">
-
-      <% if @photo["liked"] %>
-        <button class="btn btn-disabled">Liked</button>
-      <% else %>
-        <%= link_to "Like", "/like/#{@photo["id"]}", method: :post, class: "btn btn-danger" %>
-      <% end %>
+    <div class="col-xs-5">
+      <div class="row">
+        <h1><%= @photo["name"] %></h1>
+        <h4>By: <%= @photo["user"]["fullname"] %></h4>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 like-button">
+          <% if @photo["liked"] %>
+            <button class="btn btn-disabled">Liked <%= @photo["positive_votes_count"] %></button>
+          <% else %>
+            <%= link_to "/like/#{@photo["id"]}", method: :post, class: "btn btn-danger" do %>
+              Like <%= @photo["positive_votes_count"] %>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-xs-6 pulse">
+          <h4>Pulse</h4>
+          <%= @photo["rating"] %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

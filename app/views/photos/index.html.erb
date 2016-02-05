@@ -18,6 +18,17 @@
       <%= link_to("/photos/#{photo[1]}") do %>
         <div class="col-sm-4 img-container">
           <%= image_tag photo[0] %>
+          <% if photo[2] %>
+            <button class="btn btn-disabled like-overlay">Liked</button>
+          <% else %>
+            <%= link_to "Like", "/like/#{photo[1]}", method: :post, class: "btn btn-danger like-overlay" %>
+          <% end %>
+          <div class="photo-info">
+
+          </div>
+          <div class="photo-header">
+            
+          </div>
         </div>
       <% end %>
       <% end %>
