@@ -11,12 +11,17 @@
       </div>
       <div class="row">
         <div class="col-xs-6 like-button">
-          <% if @photo["liked"] %>
-            <button class="btn btn-disabled">Liked <%= @photo["positive_votes_count"] %></button>
-          <% else %>
-            <%= link_to "/like/#{@photo["id"]}", method: :post, class: "btn btn-danger" do %>
-              Like <%= @photo["positive_votes_count"] %>
+          <% if current_user %>
+            <% if @photo["liked"] %>
+              <button class="btn btn-disabled">Liked <%= @photo["positive_votes_count"] %></button>
+            <% else %>
+              <%= link_to "/like/#{@photo["id"]}", method: :post, class: "btn btn-danger" do %>
+                Like <%= @photo["positive_votes_count"] %>
+              <% end %>
             <% end %>
+          <% else %>
+            <h4>Login to Like</h4>
+            <button class="btn btn-disabled">Like <%= @photo["positive_votes_count"] %></button>
           <% end %>
         </div>
         <div class="col-xs-6 pulse">
