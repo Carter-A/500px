@@ -1,0 +1,21 @@
+<div class="container photo-grid">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <%= image_tag @photo["image_url"] %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3 col-xs-offset-3">
+      <% if @photo["liked"] %>
+        <button class="btn btn-disabled">Liked</button>
+      <% else %>
+        <%= link_to "Like", "/like/#{@photo["id"]}", method: :post %>
+      <% end %>
+    </div>
+    <div class="col-xs-3">
+
+    </div>
+  </div>
+</div>
+
+<%= @photo %>

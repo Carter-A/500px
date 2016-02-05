@@ -30,7 +30,7 @@
           <li><a href="#">Discover</a></li>
           <li><a href="#">Groups</a></li>
           <% if current_user %>
-            <li><%= link_to 'Logout', '/logout' %></li>
+            <li><%= link_to 'Logout', '/logout', method: :destroy %></li>
           <% else %>
             <li><%= link_to 'Login', '/auth/500px' %></li>
           <% end %>

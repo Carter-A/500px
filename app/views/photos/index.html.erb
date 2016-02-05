@@ -12,11 +12,13 @@
 </div>
 
 <div class="container photo-grid">
-  <% @photos_url.in_groups_of(3, false) do |group| %>
+  <% @photos.in_groups_of(3, false) do |group| %>
     <div class="row">
-      <% group.each do |photo_url| %>
+      <% group.each do |photo| %>
         <div class="col-sm-4 img-container">
-          <%= image_tag photo_url %>
+          <%= image_tag photo[0] %>
+          <%= link_to 'Show', "/photos/#{photo[1]}" %>
+          <%= photo[2] %>
         </div>
       <% end %>
     </div>

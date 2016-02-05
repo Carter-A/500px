@@ -28,6 +28,7 @@ gem 'bootstrap-sass'
 
 #HTTParty for API calls
 gem 'httparty'
+gem 'f00px'
 
 #configatron for accessing consumer_key
 gem 'configatron'
@@ -37,6 +38,7 @@ gem 'multi_json'
 
 #Oauth login
 gem 'omniauth-500px'
+gem 'omniauth'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
