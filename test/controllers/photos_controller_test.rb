@@ -20,9 +20,14 @@ class PhotosControllerTest < ActionController::TestCase
     assert_select 'a.like-overlay', 100
   end
 
-  test "should get show" do
+  test "should get show and have 1 image" do
     get(:show, {'id' => "139029315"}, {'user_id' => 1})
     assert_select 'img', 1
+  end
+
+  test "should have 1 like button" do
+    get(:show, {'id' => "139029315"}, {'user_id' => 1})
+    assert_select 'a.btn', 1
   end
 
 end
