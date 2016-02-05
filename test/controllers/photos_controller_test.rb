@@ -10,4 +10,8 @@ class PhotosControllerTest < ActionController::TestCase
     assert_not_nil assigns(:photos)
   end
 
+  test "should be 100 photos" do
+    get :index
+    assert_select 'div.img-container', 100
+  end
 end
