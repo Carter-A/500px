@@ -54,7 +54,7 @@ class PhotosController < ApplicationController
     client.token_secret = token_secret
 
     photo_id = params[:id]
-    response = client.get("https://api.500px.com/v1/photos/#{photo_id}?image_size=3&comments=1")
+    response = client.get("https://api.500px.com/v1/photos/#{photo_id}?image_size=4&comments=1")
     body = JSON.parse(response.body)
     @photo = body['photo']
   end
