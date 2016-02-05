@@ -14,4 +14,9 @@ class PhotosControllerTest < ActionController::TestCase
     get :index
     assert_select 'div.img-container', 100
   end
+
+  test "should be 100 like buttons" do
+    get :index
+    assert_select 'a.like-overlay', 100
+  end
 end
